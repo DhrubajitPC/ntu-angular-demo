@@ -7,9 +7,7 @@ import { LikeService } from './services/like.service';
 })
 export class AppComponent implements OnInit {
   title = 'ntu-demo';
-  angularNbLikes = 0;
-  reactNbLikes = 0;
-  vueNbLikes = 0;
+  nbLikes = 0;
 
   constructor(private likeService: LikeService) {}
 
@@ -20,7 +18,7 @@ export class AppComponent implements OnInit {
   updateLikeCount() {
     this.likeService.getAngularLikes()
       .then(res => {
-        this.angularNbLikes = res.length;
+        this.nbLikes = res.length;
       });
   }
 }

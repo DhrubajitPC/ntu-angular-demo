@@ -7,18 +7,15 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './angular-like.component.html',
   styleUrls: ['./angular-like.component.css']
 })
-export class AngularLikeComponent implements OnInit {
+export class AngularLikeComponent {
 
-  @Input() nbLikes = 10;
+  @Input() nbLikes;
   @Output() updateEvent = new EventEmitter<any>();
 
   isLiked = false;
   heart = faHeart;
   private likeId: number;
   constructor(private likeService: LikeService) { }
-
-  ngOnInit() {
-  }
 
   buttonClick() {
     if (!this.isLiked) {
