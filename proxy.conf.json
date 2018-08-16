@@ -5,12 +5,5 @@
     "pathRewrite": {
       "api": ""
     }
-  },
-  "/react": {
-    "target": "http://10.10.215.150:8080",
-    "secure": false,
-    "pathRewrite": {
-      "react": ""
-    }
   }
 }

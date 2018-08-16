@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { LikeService } from '../services/like.service';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-angular-like',
@@ -12,6 +13,7 @@ export class AngularLikeComponent implements OnInit {
   @Output() updateEvent = new EventEmitter<any>();
 
   isLiked = false;
+  heart = faHeart;
   private likeId: number;
   constructor(private likeService: LikeService) { }
 

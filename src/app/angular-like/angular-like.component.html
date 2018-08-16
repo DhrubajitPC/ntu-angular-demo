@@ -1,5 +1,5 @@
 <div>
   <button (click)="buttonClick()" [ngClass]="{liked: isLiked}">
-    ♥ {{nbLikes}}
+    <fa-icon [icon]="heart"></fa-icon> {{nbLikes}}
   </button>
 </div>
